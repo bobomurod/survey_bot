@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "rc": "^1.2.8",
     "telegraf": "^3.32.0"
   }
 }
