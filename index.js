@@ -8,6 +8,8 @@ const getConfig = require('./src/config/config')
 const config = getConfig('env_')
 const bot = new Telegraf(config.bot_section.bot_token)
 
+let answered_data = {};
+
 bot.use(async (ctx, next) => {
     const start = new Date()
     await next()
@@ -44,7 +46,9 @@ bot.action('survey', (ctx) => {
 })
 
 bot.hears('Узбек кирил', (ctx) => {
+    answered_data.q1 = "uzbek"
     ctx.reply('Choosed uzbek kyr')
+    console.log(answered_data.q1)
 })
 
 bot.hears('Uzbek latin', (ctx) => {
