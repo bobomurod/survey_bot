@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc && node build/finitstate.js",
+    "run": "nodemon finitstate.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^12.7.8",
     "rc": "^1.2.8",
     "telegraf": "^3.32.0",
     "telegraf-inline-menu": "^3.6.2"
